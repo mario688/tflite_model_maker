@@ -35,11 +35,10 @@ val_data = object_detector.DataLoader.from_pascal_voc(
 )
 # CHOOSE MODEL 0,1,2,3,4
 # info about models: https://www.tensorflow.org/lite/api_docs/python/tflite_model_maker/object_detector/EfficientDetLite1Spec?hl=en
-spec = model_spec.get('efficientdet_lite2')
+spec = object_detector.EfficientDetLite2Spec()
 
 # SET batch_size & epochs
 model = object_detector.create(train_data, model_spec=spec, batch_size=4, train_whole_model=True, epochs=6, validation_data=val_data)
-
 # Evaluate the model
 eval_result = model.evaluate(val_data)
 
