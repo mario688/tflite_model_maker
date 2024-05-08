@@ -29,8 +29,8 @@ train_data = object_detector.DataLoader.from_pascal_voc(
 )
 
 val_data = object_detector.DataLoader.from_pascal_voc(
-    'train-dataset/validate', # <- match folder name 
-    'train-dataset/validate', # <- match folder name 
+    'train-dataset/valid', # <- match folder name 
+    'train-dataset/valid', # <- match folder name 
     ['Target'] # <- set labels  
 )
 # CHOOSE MODEL 0,1,2,3,4
